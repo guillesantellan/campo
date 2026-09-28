@@ -154,7 +154,7 @@ function chipEstado() {
 }
 function topBar() {
   const who = EST && view !== "entrar" ? `<span class="small" style="opacity:.85">${esc(miNombre())} · <span class="mono">${esc(miPM() || "")}</span></span>` : "";
-  return `<header class="top"><div class="brand">Encuesta <small>${EST ? esc(EST.fecha) : "de campo"}</small></div><div class="sp"></div>${who}${EST && view !== "entrar" && view !== "coord" ? chipEstado() : ""}</header>`;
+  return `<header class="top"><div class="brand">Opción <small>${EST ? "Encuesta · " + esc(EST.fecha) : "Encuesta de campo"}</small></div><div class="sp"></div>${who}${EST && view !== "entrar" && view !== "coord" ? chipEstado() : ""}</header>`;
 }
 function render() {
   let body;
@@ -173,12 +173,14 @@ function render() {
 }
 function vEntrar() {
   return `<main class="wrap"><div id="inst">${htmlInstalar()}</div><section class="card">
-    <h1 style="font-size:1.5rem">Entrar</h1>
-    <p class="muted">Escribí el código que te pasó coordinación. Se hace una sola vez y necesita internet; después la app anda sin señal.</p>
-    <label class="f" for="e-cod">Tu código<input class="in codigo" id="e-cod" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="ABC-DEF" value="${esc(CODIGO)}"></label>
+    <h1 style="font-size:1.5rem">Encuesta de campo</h1>
+    <p>App de uso interno del equipo de encuestadores de <b>Opción</b>, consultora de opinión pública.</p>
+    <p class="muted">Escribí el código de acceso que te dio coordinación. Se hace una sola vez y necesita internet; después la app anda sin señal.</p>
+    <label class="f" for="e-cod">Código de acceso<input class="in codigo" id="e-cod" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="ABC-DEF" value="${esc(CODIGO)}"></label>
     <button class="btn primary big block" id="e-ok">Entrar</button>
     <p class="small muted">Los códigos no llevan 0, O, 1, I ni L. Da igual si lo escribís con guion o en minúscula.</p>
-  </section></main>`;
+  </section>
+  <p class="small muted" style="text-align:center">Esta app no pide contraseñas, datos bancarios ni cuentas de Google, WhatsApp u otros servicios. Solo usa el código de acceso que entrega el equipo de Opción.</p></main>`;
 }
 function vCoord() {
   const opts = EST.pms.map(p => `<option value="${esc(p.id)}">${esc(p.id)} · ${esc(p.nombre)}</option>`).join("");

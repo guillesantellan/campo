@@ -1,7 +1,7 @@
 {
-  "name": "Encuesta de campo",
-  "short_name": "Encuesta",
-  "description": "Cuestionario de campo para encuestadores, funciona sin internet.",
+  "name": "Opción · Encuesta de campo",
+  "short_name": "Opción",
+  "description": "App interna de Opción, consultora de opinión pública, para encuestas presenciales sin conexión.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",

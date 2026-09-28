@@ -3,13 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Encuesta de campo</title>
+<title>Opción · Encuesta de campo</title>
+<meta name="description" content="Aplicación de campo de Opción, consultora de opinión pública, para que su equipo de encuestadores cargue encuestas presenciales sin conexión.">
+<meta name="author" content="Opción, consultora de opinión pública">
 <link rel="manifest" href="manifest.webmanifest">
 <meta name="theme-color" content="#17324f">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Encuesta">
+<meta name="apple-mobile-web-app-title" content="Opción">
 <meta name="robots" content="noindex,nofollow">
 <link rel="apple-touch-icon" href="icono-180.png">
 <link rel="icon" href="icono-192.png">
@@ -17,7 +19,15 @@
 </head>
 <body>
 <!-- La app del encuestador. Todo se dibuja desde app.js dentro de #app. -->
-<div id="app"></div>
+<div id="app">
+<header class="top"><div class="brand">Opción <small>Encuesta de campo</small></div></header>
+<main class="wrap"><section class="card">
+<h1 style="font-size:1.5rem">Encuesta de campo · Opción</h1>
+<p>Aplicación de uso interno de <b>Opción</b>, consultora de opinión pública, para que su equipo de encuestadores cargue encuestas presenciales en el teléfono, incluso sin conexión.</p>
+<p class="small muted">Esta app no pide contraseñas, datos bancarios ni cuentas de Google, WhatsApp u otros servicios. Solo usa el código de acceso que entrega el equipo de Opción.</p>
+<noscript><p class="nota">Para usar la app hace falta activar JavaScript en el navegador.</p></noscript>
+</section></main>
+</div>
 <div id="toast" class="toast" hidden></div>
 <script src="comun.js"></script>
 <script src="app.js"></script>

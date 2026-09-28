@@ -3,7 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Receptor de encuestas</title>
+<title>Opción · Receptor de encuestas</title>
+<meta name="description" content="Receptor de coordinación de Opción, consultora de opinión pública: junta y analiza las encuestas que envía su equipo de campo.">
+<meta name="author" content="Opción, consultora de opinión pública">
 <meta name="theme-color" content="#17324f">
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" href="icono-192.png">
@@ -12,7 +14,12 @@
 <body>
 <!-- El receptor de coordinación. Se abre con un código de coordinación.
      Los datos que se cargan quedan SOLO en este navegador (localStorage): no se suben a ningún lado. -->
-<div id="app"></div>
+<div id="app">
+<header class="top"><div class="brand">Opción <small>Receptor de encuestas</small></div></header>
+<main class="wrap"><section class="card"><h1 style="font-size:1.5rem">Receptor de coordinación · Opción</h1>
+<p>Herramienta interna de <b>Opción</b>, consultora de opinión pública, para juntar y analizar las encuestas que envía su equipo de campo. Los datos quedan en esta computadora.</p>
+<p class="small muted">Esta app no pide contraseñas, datos bancarios ni cuentas de Google, WhatsApp u otros servicios. Solo usa el código de acceso que entrega el equipo de Opción.</p></section></main>
+</div>
 <div id="toast" class="toast" hidden></div>
 <script src="comun.js"></script>
 <script src="receptor.js"></script>

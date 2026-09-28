@@ -8,7 +8,7 @@
    - el armazón (html, iconos, manifest) va de caché primero: abre instantáneo y anda sin señal.
    - los estudios van de red primero: si hay internet trae la última versión; si no, la guardada.
 */
-const VERSION = "20260928184318";
+const VERSION = "20260928210738";
 const CACHE = "encuestas-" + VERSION;
 const ARMAZON = ["./", "./index.html", "./estilos.css", "./comun.js", "./app.js",
                  "./receptor.html", "./receptor.js", "./manifest.webmanifest",
