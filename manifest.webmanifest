@@ -1,0 +1,17 @@
+{
+  "name": "Encuesta de campo",
+  "short_name": "Encuesta",
+  "description": "Cuestionario de campo para encuestadores, funciona sin internet.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#eef1f4",
+  "theme_color": "#17324f",
+  "lang": "es-AR",
+  "icons": [
+    {"src": "icono-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "icono-512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "icono-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}

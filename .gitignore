@@ -1,0 +1,5 @@
+# Nunca se suben: son la llave del estudio y el cuestionario en claro
+herramientas/privado/
+herramientas/fuente/
+__pycache__/
+*.pyc
