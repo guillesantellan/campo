@@ -180,7 +180,7 @@ function vEntrar() {
     <button class="btn primary big block" id="e-ok">Entrar</button>
     <p class="small muted">Los códigos no llevan 0, O, 1, I ni L. Da igual si lo escribís con guion o en minúscula.</p>
   </section>
-  <p class="small muted" style="text-align:center">Esta app no pide contraseñas, datos bancarios ni cuentas de Google, WhatsApp u otros servicios. Solo usa el código de acceso que entrega el equipo de Opción.</p></main>`;
+  <p class="small muted" style="text-align:center">Esta app no pide contraseñas, datos bancarios ni cuentas de Google, WhatsApp u otros servicios. Solo usa el código de acceso que entrega el equipo de Opción. La opera Opción y está alojada en el sitio de Guillermo Santellán (guillesantellan.github.io). Las respuestas se usan solo para el estudio y no se comparten con terceros.</p></main>`;
 }
 function vCoord() {
   const opts = EST.pms.map(p => `<option value="${esc(p.id)}">${esc(p.id)} · ${esc(p.nombre)}</option>`).join("");

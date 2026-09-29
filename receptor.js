@@ -134,7 +134,7 @@ function qualityFlags(cs) {
 
 // ───────────────────────────── pantallas ─────────────────────────────
 function render() {
-  const top = `<header class="top"><div class="brand">Receptor <small>${EST ? esc(EST.nombre) : "de encuestas"}</small></div><div class="sp"></div>${EST ? `<button class="btn sm ghost" id="salir" style="color:inherit;border-color:rgba(255,255,255,.35);min-height:32px">Cambiar código</button>` : ""}</header>`;
+  const top = `<header class="top"><div class="brand">Opción <small>${EST ? "Receptor · " + esc(EST.nombre) : "Receptor de encuestas"}</small></div><div class="sp"></div>${EST ? `<button class="btn sm ghost" id="salir" style="color:inherit;border-color:rgba(255,255,255,.35);min-height:32px">Cambiar código</button>` : ""}</header>`;
   if (!SES) { $("#app").innerHTML = top + vEntrar(); bind(); return; }
   if (!DATA) loadData();
   VARS = buildVars();
@@ -152,10 +152,12 @@ function render() {
 }
 function vEntrar() {
   return `<main class="wrap"><section class="card"><h1 style="font-size:1.5rem">Receptor de coordinación</h1>
+    <p>Herramienta interna de <b>Opción</b>, consultora de opinión pública.</p>
     <p class="muted">Entrá con un código de coordinación. Lo que recibas queda guardado solo en este navegador.</p>
     <label class="f" for="e-cod">Código de coordinación<input class="in codigo" id="e-cod" autocomplete="off" spellcheck="false" value="${esc(LS.get(K_RCOD, ""))}"></label>
     <div class="row" id="e-file-row" ${location.protocol === "file:" ? "" : "hidden"}><label class="f" for="e-file" style="flex:1">Archivo del estudio (estudios/e-….json)<input class="in" type="file" id="e-file" accept=".json"></label></div>
-    <button class="btn primary big block" id="e-ok">Entrar</button></section></main>`;
+    <button class="btn primary big block" id="e-ok">Entrar</button></section>
+    <p class="small muted" style="text-align:center">Esta app no pide contraseñas, datos bancarios ni cuentas de Google, WhatsApp u otros servicios. Solo usa el código de acceso que entrega el equipo de Opción. La opera Opción y está alojada en el sitio de Guillermo Santellán (guillesantellan.github.io). Las respuestas se usan solo para el estudio y no se comparten con terceros.</p></main>`;
 }
 function tRecibir(cs) {
   const log = DATA.log.slice(0, 30).map(l => `<tr><td class="small">${new Date(l.t).toLocaleString("es-AR", { day: "2-digit", month: "2-digit", hour: "2-digit", minute: "2-digit" })}</td><td>${esc(l.nombre)}</td><td class="n">${l.casos || ""}</td><td class="n">${l.nuevos || ""}</td><td class="small">${l.timbres ? l.timbres + " días de timbres" : ""}${l.contactos ? " " + l.contactos + " contactos" : ""}${l.desconocido ? ' <span class="neg">formato no reconocido</span>' : ""}${l.ajenos ? ` <span class="neg">${l.ajenos} de otro estudio</span>` : ""}</td></tr>`).join("");
